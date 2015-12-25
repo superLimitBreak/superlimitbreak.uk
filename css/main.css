@@ -1,10 +1,5 @@
 html {
     background-color: black;
-    /*
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    */
 }
 
 body {
@@ -20,7 +15,6 @@ h1 {
     display: none;
 }
 
-
 .logo {
     width: 50vh;
     height: 50vh;
@@ -28,7 +22,7 @@ h1 {
     border-width: 2vh;
     border-style: solid;
     border-color: white;
-    animation: glow 1.5s ease-out 0s infinite; /* alternate */
+    animation: glow 1.5s ease-out 0s infinite;
 }
 @keyframes glow {
     0%   {box-shadow: 0 0 0vh 0vh green;}

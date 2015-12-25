@@ -1,4 +1,4 @@
-Super Limit Breal Website
+Super Limit Break Website
 =========================
 
 Currently a static placeholder website.
