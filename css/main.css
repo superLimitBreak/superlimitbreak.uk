@@ -18,16 +18,12 @@ h1 {
 .logo {
     width: 50vh;
     height: 50vh;
-    border-radius: 50vh;
-    border-width: 2vh;
-    border-style: solid;
-    border-color: white;
-    animation: glow 1.5s ease-out 0s infinite;
+    animation: pulse 1.5s ease-out 0s infinite;
 }
-@keyframes glow {
-    0%   {box-shadow: 0 0 0vh 0vh green;}
-    10%  {box-shadow: 0 0 10vh 5vh green; border-color: green; border-width: 2.5vh; width: 52vh;}
-    100% {box-shadow: 0 0 0vh 0vh green;}
+@keyframes pulse {
+    0%   {width: 50vh; height: 50vh;}
+    10%  {width: 52vh; height: 52vh;}
+    100% {width: 50vh; height: 50vh;}
 }
 
 .links {
