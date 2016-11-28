@@ -1,11 +1,21 @@
+ENV=_env
+PIP=$(ENV)/bin/pip3
+
+DEPENDENCIES_PYTHON:=dependencies.python.txt
 
 help:
 	# install
 
-install: css/cssreset-min.css
+install: $(ENV)
 
-css/cssreset-min.css:
-	curl http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css -o css/cssreset-min.css
+$(ENV):
+	virtualenv -p python3 $(ENV)
+	$(PIP) install --upgrade pip
+	$(PIP) install -r $(DEPENDENCIES_PYTHON)
+
+.PHONY: upgrade_pip
+upgrade_pip:
+	$(PIP) install --upgrade pip ; $(PIP) install --upgrade -r $(DEPENDENCIES_PYTHON)
 
 clean:
-	rm css/cssreset-min.css
+	rm -rf $(ENV)

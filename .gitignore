@@ -1,2 +1,6 @@
 .DS_Store
+
+_env/
+
+# TODO: Remove these once migration to Nikola is complete
 css/cssreset-min.css
