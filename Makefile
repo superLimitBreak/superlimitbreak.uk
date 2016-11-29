@@ -1,5 +1,9 @@
 ENV=_env
 PIP=$(ENV)/bin/pip3
+NIKOLA=$(ENV)/bin/nikola
+SITE=superLimitBreak
+
+RUN_NIKOLA=cd $(SITE) ; ../$(NIKOLA)
 
 DEPENDENCIES_PYTHON:=dependencies.python.txt
 
@@ -19,3 +23,8 @@ upgrade_pip:
 
 clean:
 	rm -rf $(ENV)
+
+run:
+	#$(RUN_NIKOLA) auto --browser  # Broken?
+	$(RUN_NIKOLA) build
+	$(RUN_NIKOLA) serve --browser
