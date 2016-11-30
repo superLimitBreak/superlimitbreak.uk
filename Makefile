@@ -24,11 +24,20 @@ upgrade_pip:
 clean:
 	rm -rf $(ENV)
 
+.PHONY: run
 run:
 	#$(RUN_NIKOLA) auto --browser  # Broken?
 
+.PHONY: build
 build:
 	$(RUN_NIKOLA) build
 
-serve:
+$(SITE)/output:
+	$(RUN_NIKOLA) build
+
+.PHONY: serve
+serve: $(SITE)/output
 	$(RUN_NIKOLA) serve --browser
+
+new_post:
+	$(RUN_NIKOLA) new_post
