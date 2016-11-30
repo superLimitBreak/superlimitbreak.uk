@@ -1,7 +1,7 @@
 ENV=_env
 PIP=$(ENV)/bin/pip3
 NIKOLA=$(ENV)/bin/nikola
-SITE=superLimitBreak
+SITE=superLimitBreak.uk
 
 RUN_NIKOLA=cd $(SITE) ; ../$(NIKOLA)
 
@@ -26,5 +26,9 @@ clean:
 
 run:
 	#$(RUN_NIKOLA) auto --browser  # Broken?
+
+build:
 	$(RUN_NIKOLA) build
+
+serve:
 	$(RUN_NIKOLA) serve --browser
