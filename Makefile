@@ -41,3 +41,6 @@ serve: $(SITE)/output
 
 new_post:
 	$(RUN_NIKOLA) new_post
+
+new_page:
+	$(RUN_NIKOLA) new_page
